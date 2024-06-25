@@ -5,7 +5,7 @@
         <AssemblyName>Shlygly.JuicesMod</AssemblyName>
         <Product>JuicesMod</Product>
         <!-- Change to whatever version you're currently on. -->
-        <Version>0.1.0</Version>
+        <Version>0.2.0</Version>
     </PropertyGroup>
 
     <!-- Project Properties -->
@@ -65,6 +65,6 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="echo f | xcopy /f /y &quot;$(TargetPath)&quot; &quot;C:\Users\Shlygly\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\Shlaiibrowdall\BepInEx\plugins\JuicesMod\Shlygly.JuicesMod.dll&quot;" />
+      <Exec Command="echo f | xcopy /f /y &quot;$(TargetPath)&quot; &quot;thunderstore_package\Shlygly.JuicesMod.dll&quot;" />
     </Target>
 </Project>

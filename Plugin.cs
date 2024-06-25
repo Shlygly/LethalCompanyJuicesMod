@@ -1,6 +1,4 @@
 using BepInEx;
-using HarmonyLib;
-using LethalLib.Modules;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
@@ -14,6 +12,8 @@ namespace JuicesMod
 
         public static Plugin instance;
 
+        private string[] FRUITS = ["Orange", "Apple", "Pineapple", "Tomato", "Prune"];
+
         private void Awake()
         {
             instance = this;
@@ -23,12 +23,11 @@ namespace JuicesMod
 
             JuicesBuilder juicesBuilder = new JuicesBuilder(bundle);
 
-            juicesBuilder.registerBrick("OrangeJuice001Item");
-            juicesBuilder.registerBrick("AppleJuice001Item");
-            juicesBuilder.registerBrick("PineappleJuice001Item");
-            juicesBuilder.registerPremium("OrangeJuice002Item");
-            juicesBuilder.registerPremium("AppleJuice002Item");
-            juicesBuilder.registerPremium("PineappleJuice002Item");
+            foreach(string fruit in FRUITS)
+            {
+                juicesBuilder.registerBrick($"{fruit}Juice001Item");
+                juicesBuilder.registerPremium($"{fruit}Juice002Item");
+            }
 
             //TerminalNode node = ScriptableObject.CreateInstance<TerminalNode>();
             //node.clearPreviousText = true;

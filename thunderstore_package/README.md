@@ -8,6 +8,8 @@ Here are all the types of juice available :
  - **Sapik** : Orange juice
  - **Cédhou** : Apple juice
  - **Saifrai** : Pineapple juice
+ - **Saydlassoup** : Tomato juice
+ - **Daibousher** : Prune juice
 
 All juices are available in these formats :
  - **Carton** : price between 15 and 30
