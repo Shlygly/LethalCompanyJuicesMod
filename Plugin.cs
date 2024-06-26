@@ -1,4 +1,5 @@
 using BepInEx;
+using BepInEx.Logging;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
@@ -11,12 +12,16 @@ namespace JuicesMod
     {
 
         public static Plugin instance;
+        internal new static ManualLogSource Logger;
+        internal static Config BoundConfig { get; private set; } = null;
 
         private string[] FRUITS = ["Orange", "Apple", "Pineapple", "Tomato", "Prune"];
 
         private void Awake()
         {
             instance = this;
+            Logger = base.Logger;
+            BoundConfig = new Config(base.Config);
 
             string assetDir = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "juicesmod");
             AssetBundle bundle = AssetBundle.LoadFromFile(assetDir);
@@ -25,7 +30,7 @@ namespace JuicesMod
 
             foreach(string fruit in FRUITS)
             {
-                juicesBuilder.registerBrick($"{fruit}Juice001Item");
+                juicesBuilder.registerCarton($"{fruit}Juice001Item");
                 juicesBuilder.registerPremium($"{fruit}Juice002Item");
             }
 

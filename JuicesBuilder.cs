@@ -22,12 +22,12 @@ namespace JuicesMod
             Items.RegisterScrap(juice, rarity, levelType);
         }
 
-        public void registerBrick(string asset)
+        public void registerCarton(string asset)
         {
             registerJuice(
                 asset,
                 38, 75, // 15 - 30
-                80
+                Config.Instance.cartonsRarity.Value
             );
         }
 
@@ -36,7 +36,7 @@ namespace JuicesMod
             registerJuice(
                 asset,
                 75, 125, // 30 - 50
-                60
+                Config.Instance.premiumsRarity.Value
             );
         }
     }
