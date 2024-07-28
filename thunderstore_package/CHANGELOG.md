@@ -1,3 +1,7 @@
+# v1.0.0
+ - Added juice blender furniture
+ - Fixed scraps audio sources
+
 # v0.2.1
  - Configuration keys for items rarity
  - Rebalanced item rarity
