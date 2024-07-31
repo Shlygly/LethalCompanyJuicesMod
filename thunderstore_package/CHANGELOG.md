@@ -1,3 +1,7 @@
+# v1.1.0
+ - Added six pack format
+ - Juice spawn FX
+
 # v1.0.0
  - Added juice blender furniture
  - Fixed scraps audio sources

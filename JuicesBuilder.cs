@@ -27,23 +27,38 @@ namespace JuicesMod
 
         public void registerJuice(FruitProperty fruit, JuiceTypeProperty type, Levels.LevelTypes levelType = Levels.LevelTypes.All)
         {
-            Item juice = bundle.LoadAsset<Item>($"Assets/JuicesMod/Juices/{type.Name}s/{fruit.Name}Juice{type.Index:000}Item.asset");
-            juice.minValue = type.MinValue;
-            juice.maxValue = type.MaxValue;
-            NetworkPrefabs.RegisterNetworkPrefab(juice.spawnPrefab);
-            Utilities.FixMixerGroups(juice.spawnPrefab);
-            Items.RegisterScrap(juice, type.Rarity, levelType);
-            juices.Add(juice, new Tuple<FruitProperty, JuiceTypeProperty>(fruit, type));
+            try
+            {
+                Item juice = bundle.LoadAsset<Item>($"Assets/JuicesMod/Juices/{type.Name}s/{fruit.Name}Juice{type.Index:000}Item.asset");
+                juice.minValue = type.MinValue;
+                juice.maxValue = type.MaxValue;
+                NetworkPrefabs.RegisterNetworkPrefab(juice.spawnPrefab);
+                Utilities.FixMixerGroups(juice.spawnPrefab);
+                Items.RegisterScrap(juice, type.Rarity, levelType);
+                juices.Add(juice, new Tuple<FruitProperty, JuiceTypeProperty>(fruit, type));
+                Plugin.Logger.LogInfo($"Registered : {fruit.Name} juice in {type.Name} format");
+            }
+            catch (Exception ex)
+            {
+                Plugin.Logger.LogError($"Can't register {fruit.Name} juice in {type.Name} format !");
+            }
         }
 
         public void registerMultifruitJuice(JuiceTypeProperty type)
         {
-            Item juice = bundle.LoadAsset<Item>($"Assets/JuicesMod/Juices/{type.Name}s/MultifruitJuice{type.Index:000}Item.asset");
-            NetworkPrefabs.RegisterNetworkPrefab(juice.spawnPrefab);
-            Utilities.FixMixerGroups(juice.spawnPrefab);
-            Items.RegisterScrap(juice, 0, Levels.LevelTypes.None);
-            multifruits.Add(type, juice);
-        }
+            try { 
+                Item juice = bundle.LoadAsset<Item>($"Assets/JuicesMod/Juices/{type.Name}s/MultifruitJuice{type.Index:000}Item.asset");
+                NetworkPrefabs.RegisterNetworkPrefab(juice.spawnPrefab);
+                Utilities.FixMixerGroups(juice.spawnPrefab);
+                Items.RegisterScrap(juice, 0, Levels.LevelTypes.None);
+                multifruits.Add(type, juice);
+                Plugin.Logger.LogInfo($"Registered : Multifruit juice in {type.Name} format");
+            }
+            catch (Exception ex)
+            {
+                Plugin.Logger.LogError($"Can't register Multifruit juice in {type.Name} format !");
+            }
+}
 
         public bool hasJuiceProperty(GrabbableObject item)
         {

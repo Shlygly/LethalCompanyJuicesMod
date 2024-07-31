@@ -10,10 +10,13 @@ namespace JuicesMod.Properties
         public static void Initialize()
         {
             JUICE_TYPES.Add("Carton",
-                new JuiceTypeProperty("Carton",     1,  1.2f,   20, 40,   Config.Instance.cartonsRarity.Value)
+                new JuiceTypeProperty("Carton",     1,  1.2f,   20, 40,     Config.Instance.cartonsRarity.Value)
             );
             JUICE_TYPES.Add("Premium",
-                new JuiceTypeProperty("Premium",    2,  1.5f,   30, 60,   Config.Instance.premiumsRarity.Value)
+                new JuiceTypeProperty("Premium",    2,  1.5f,   30, 60,     Config.Instance.premiumsRarity.Value)
+            );
+            JUICE_TYPES.Add("Pack",
+                new JuiceTypeProperty("Pack",       3,  1.3f,   80, 140,    Config.Instance.packRarity.Value)
             );
         }
 

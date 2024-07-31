@@ -22,6 +22,7 @@ namespace JuicesMod.Behaviours
         public List<Renderer> juiceRenderers = new();
         public InteractTrigger powerButtonTrigger;
         public InteractTrigger addJuiceTrigger;
+        public GameObject juiceSpawnFX;
 
         public void Awake()
         {
@@ -154,6 +155,18 @@ namespace JuicesMod.Behaviours
         {
             ((GameObject)multifruit).GetComponent<PhysicsProp>().SetScrapValue(scrapValue);
             juiceContent.Clear();
+
+            GameObject SpawnFx = Instantiate(
+                juiceSpawnFX,
+                ((GameObject)multifruit).transform.position,
+                Quaternion.identity,
+                ((GameObject)multifruit).transform
+            );
+            AudioSource SpawnSound = SpawnFx.GetComponent<AudioSource>();
+            if (SpawnSound != null && !SpawnSound.isPlaying)
+            {
+                SpawnSound.Play();
+            }
 
             ApplyBlendingState(false);
         }

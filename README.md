@@ -22,6 +22,7 @@ Here are all the types of juice available :
 All juices are available in these formats :
  - **Carton** : price between 20 and 40 - multiplier : 1.2
  - **Premium bottle** : price between 30 and 60 - multiplier : 1.5
+ - **Six pack** : price between 80 and 140 - multiplier : 1.3
 
 ### Juice blender
 

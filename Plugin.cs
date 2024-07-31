@@ -65,7 +65,7 @@ namespace JuicesMod
                 Logger.LogError("Unable to load JUICE BLENDER !!!");
             }
 
-            Logger.LogInfo("Juices Mod Loaded !");
+            Logger.LogInfo("Juices Mod Loaded");
         }
 
         private void RegisterRPCs()
