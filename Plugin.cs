@@ -26,6 +26,7 @@ namespace JuicesMod
         internal static Config BoundConfig { get; private set; } = null;
 
         public JuicesBuilder JuicesBuilder { get; private set; } = null;
+        public UnlockablesBuilder UnlockablesBuilder { get; private set; } = null;
 
         private void Awake()
         {
@@ -40,6 +41,7 @@ namespace JuicesMod
             JuiceTypeProperty.Initialize();
 
             JuicesBuilder = new JuicesBuilder(bundle);
+            UnlockablesBuilder = new UnlockablesBuilder(bundle);
 
             foreach (JuiceTypeProperty type in JuiceTypeProperty.JUICE_TYPES.Values)
             {
@@ -50,20 +52,10 @@ namespace JuicesMod
                 JuicesBuilder.registerMultifruitJuice(type);
             }
 
-            UnlockableItemDef juiceBlender = bundle.LoadAsset<UnlockableItemDef>("Assets/JuicesMod/ShipJuiceBlenderItem.asset");
-            if (juiceBlender?.unlockable?.prefabObject != null)
-            {
-                NetworkPrefabs.RegisterNetworkPrefab(juiceBlender.unlockable.prefabObject);
-                Utilities.FixMixerGroups(juiceBlender.unlockable.prefabObject);
-            }
-            if (juiceBlender != null)
-            {
-                Unlockables.RegisterUnlockable(juiceBlender, 80, StoreType.ShipUpgrade);
-            }
-            else
-            {
-                Logger.LogError("Unable to load JUICE BLENDER !!!");
-            }
+            UnlockablesBuilder.register("JuiceBlender", 80, StoreType.ShipUpgrade);
+            UnlockablesBuilder.register("Neons/Sapik", 24, StoreType.ShipUpgrade);
+            UnlockablesBuilder.register("Neons/Cedhou", 24, StoreType.ShipUpgrade);
+            UnlockablesBuilder.register("Neons/Saifrai", 24, StoreType.ShipUpgrade);
 
             Logger.LogInfo("Juices Mod Loaded");
         }

@@ -36,7 +36,7 @@ namespace JuicesMod
                 Utilities.FixMixerGroups(juice.spawnPrefab);
                 Items.RegisterScrap(juice, type.Rarity, levelType);
                 juices.Add(juice, new Tuple<FruitProperty, JuiceTypeProperty>(fruit, type));
-                Plugin.Logger.LogInfo($"Registered : {fruit.Name} juice in {type.Name} format");
+                Plugin.Logger.LogInfo($"Registered juice : {fruit.Name} juice in {type.Name} format");
             }
             catch (Exception ex)
             {
@@ -46,13 +46,14 @@ namespace JuicesMod
 
         public void registerMultifruitJuice(JuiceTypeProperty type)
         {
-            try { 
+            try
+            { 
                 Item juice = bundle.LoadAsset<Item>($"Assets/JuicesMod/Juices/{type.Name}s/MultifruitJuice{type.Index:000}Item.asset");
                 NetworkPrefabs.RegisterNetworkPrefab(juice.spawnPrefab);
                 Utilities.FixMixerGroups(juice.spawnPrefab);
                 Items.RegisterScrap(juice, 0, Levels.LevelTypes.None);
                 multifruits.Add(type, juice);
-                Plugin.Logger.LogInfo($"Registered : Multifruit juice in {type.Name} format");
+                Plugin.Logger.LogInfo($"Registered juice : Multifruit juice in {type.Name} format");
             }
             catch (Exception ex)
             {

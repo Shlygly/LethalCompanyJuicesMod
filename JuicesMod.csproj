@@ -5,7 +5,7 @@
         <AssemblyName>Shlygly.JuicesMod</AssemblyName>
         <Product>JuicesMod</Product>
         <!-- Change to whatever version you're currently on. -->
-        <Version>1.1.0</Version>
+        <Version>1.2.0</Version>
     </PropertyGroup>
 
     <!-- Project Properties -->
@@ -68,6 +68,10 @@
       <Reference Include="UnityEngine.AssetBundleModule">
         <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
       </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="_doc-resources\" />
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">

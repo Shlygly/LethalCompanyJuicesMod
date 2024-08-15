@@ -24,10 +24,21 @@ All juices are available in these formats :
  - **Premium bottle** : price between 30 and 60 - multiplier : 1.5
  - **Six pack** : price between 80 and 140 - multiplier : 1.3
 
+### Neons
+
+You can buy neons furniture to decorate your ship with your favorite juices brands. What's special about them is that they're on the outside of the ship !
+
+Here are all the neons available :
+ - **Sapik Neon** : cost 24 ![Sapik neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-sapik.png)
+ - **Cédhou Neon** : cost 24 ![Cédhou neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-cedhou.png)
+ - **Saifrai Neon** : cost 24 ![Saifrai neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-saifrai.png)
+
 ### Juice blender
 
-The juice blender is a furniture you can by in the store to earn more money by combining juices.
+The juice blender is a furniture you can buy in the store to earn more money by combining juices.
 Up to 4 juices can be combined to create a *Plindfruy* multi-fruit juice.
+
+![Juice blender screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-juice-blender.png)
 
 The price of a multi-fruit juice is the sum of the juices that have been combined, multiplied by a value defined by the format of the juices used (specified above).
 If different juice formats are used in the same mix, the smallest multiplier is used.

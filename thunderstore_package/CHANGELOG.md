@@ -1,3 +1,8 @@
+# v1.2.0
+ - Added "Sapik" neon furniture
+ - Added "Cédhou" neon furniture
+ - Added "Saifrai" neon furniture
+
 # v1.1.0
  - Added six pack format
  - Juice spawn FX
