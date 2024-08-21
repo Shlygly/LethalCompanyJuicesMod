@@ -1,3 +1,6 @@
+# v1.2.1
+ - Fixed audio sources playing as global
+
 # v1.2.0
  - Added "Sapik" neon furniture
  - Added "Cédhou" neon furniture
