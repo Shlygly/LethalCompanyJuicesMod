@@ -1,3 +1,8 @@
+# v1.3.0
+ - Added Vitamin Detector
+ - Added banana juice (Traize & Paie)
+ - Fixed scan nodes that didn't appear
+
 # v1.2.1
  - Fixed audio sources playing as global
 

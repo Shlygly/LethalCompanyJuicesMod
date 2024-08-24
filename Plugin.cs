@@ -1,18 +1,12 @@
 using BepInEx;
 using BepInEx.Logging;
-using LethalLib.Extras;
 using LethalLib.Modules;
-using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using UnityEngine;
-using System.Collections;
-using JuicesMod.Behaviours;
-using GameNetcodeStuff;
 using JuicesMod.Properties;
-using System.Linq;
+using static LethalLib.Modules.Levels;
 
 namespace JuicesMod
 {
@@ -56,6 +50,24 @@ namespace JuicesMod
             UnlockablesBuilder.register("Neons/Sapik", 24, StoreType.ShipUpgrade);
             UnlockablesBuilder.register("Neons/Cedhou", 24, StoreType.ShipUpgrade);
             UnlockablesBuilder.register("Neons/Saifrai", 24, StoreType.ShipUpgrade);
+
+            try
+            {
+                Item scanner = bundle.LoadAsset<Item>($"Assets/JuicesMod/VitaminDetectorItem.asset");
+                NetworkPrefabs.RegisterNetworkPrefab(scanner.spawnPrefab);
+                Utilities.FixMixerGroups(scanner.spawnPrefab);
+
+                TerminalNode node = ScriptableObject.CreateInstance<TerminalNode>();
+                node.clearPreviousText = true;
+                node.displayText = "A radar that detects nearby fruit juices.\n\n";
+                Items.RegisterShopItem(scanner, null, null, node, 74);
+
+                Logger.LogInfo($"Registered Vitamin Detector");
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Can't register Vitamin Detector !");
+            }
 
             Logger.LogInfo("Juices Mod Loaded");
         }

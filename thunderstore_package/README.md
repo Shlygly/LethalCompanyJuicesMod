@@ -17,6 +17,7 @@ Here are all the types of juice available :
  - **Saifrai** : Pineapple juice
  - **Saydlassoup** : Tomato juice
  - **Daibousher** : Prune juice
+ - **Traize & Paie** : Banana juice
  - **Plindfruy** : Multifruit juice (special juice that can't spawn, see juice blender mechanic)
 
 All juices are available in these formats :
@@ -24,14 +25,11 @@ All juices are available in these formats :
  - **Premium bottle** : price between 30 and 60 - multiplier : 1.5
  - **Six pack** : price between 80 and 140 - multiplier : 1.3
 
-### Neons
+### Vitamin detector
 
-You can buy neons furniture to decorate your ship with your favorite juices brands. What's special about them is that they're on the outside of the ship !
+You can buy a vitamin detector in the store for 74. It works like a juice radar: the closer you are to a juice, the greener its color.
 
-Here are all the neons available :
- - **Sapik Neon** : cost 24 ![Sapik neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-sapik.png)
- - **Cédhou Neon** : cost 24 ![Cédhou neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-cedhou.png)
- - **Saifrai Neon** : cost 24 ![Saifrai neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-saifrai.png)
+![Vitamin detector](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/item-vitamin-detector.png)
 
 ### Juice blender
 
@@ -44,6 +42,15 @@ The price of a multi-fruit juice is the sum of the juices that have been combine
 If different juice formats are used in the same mix, the smallest multiplier is used.
 
 If the juice blender is not completely filled (4 juices), the multiplier is reduced.
+
+### Neons
+
+You can buy neons furniture to decorate your ship with your favorite juices brands. What's special about them is that they're on the outside of the ship !
+
+Here are all the neons available :
+ - **Sapik Neon** : cost 24 ![Sapik neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-sapik.png)
+ - **Cédhou Neon** : cost 24 ![Cédhou neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-cedhou.png)
+ - **Saifrai Neon** : cost 24 ![Saifrai neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-saifrai.png)
 
 ## Why ?
 

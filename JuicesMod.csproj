@@ -5,7 +5,7 @@
         <AssemblyName>Shlygly.JuicesMod</AssemblyName>
         <Product>JuicesMod</Product>
         <!-- Change to whatever version you're currently on. -->
-        <Version>1.2.1</Version>
+        <Version>1.3.0</Version>
     </PropertyGroup>
 
     <!-- Project Properties -->
@@ -39,6 +39,9 @@
         -->
         <PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
     </PropertyGroup>
+    <ItemGroup>
+      <None Remove="thunderstore_package\README.md~RF2f5eeb07.TMP" />
+    </ItemGroup>
 
     <!-- Primary Package References -->
     <ItemGroup>

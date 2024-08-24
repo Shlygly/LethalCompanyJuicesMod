@@ -76,6 +76,11 @@ namespace JuicesMod
             throw new ArgumentException($"Unable to find juice property for item \"{item.name}\". Did you miss a check with \"hasJuiceProperty\" ?");
         }
 
+        public bool isMultifruit(GrabbableObject item)
+        {
+            return multifruits.ContainsValue(item.itemProperties);
+        }
+
         public Item getMultifruit(JuiceTypeProperty type)
         {
             if (multifruits.ContainsKey(type))
