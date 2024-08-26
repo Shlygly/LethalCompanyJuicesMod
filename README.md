@@ -31,6 +31,8 @@ You can buy a vitamin detector in the store for 74. It works like a juice radar:
 
 ![Vitamin detector](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/item-vitamin-detector.png)
 
+You can add the [ReservedVitaminDetectorSlot](https://thunderstore.io/c/lethal-company/p/Shlygly/ReservedVitaminDetectorSlot/) mod to have a reserved slot for it.
+
 ### Juice blender
 
 The juice blender is a furniture you can buy in the store to earn more money by combining juices.

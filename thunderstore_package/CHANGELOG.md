@@ -1,3 +1,6 @@
+# v1.3.1
+ - Made Vitamin Detector compatible with reserved item slot
+
 # v1.3.0
  - Added Vitamin Detector
  - Added banana juice (Traize & Paie)

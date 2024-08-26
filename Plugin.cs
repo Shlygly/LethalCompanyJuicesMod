@@ -21,6 +21,7 @@ namespace JuicesMod
 
         public JuicesBuilder JuicesBuilder { get; private set; } = null;
         public UnlockablesBuilder UnlockablesBuilder { get; private set; } = null;
+        public Item VitaminDetector { get; private set; } = null;
 
         private void Awake()
         {
@@ -53,14 +54,14 @@ namespace JuicesMod
 
             try
             {
-                Item scanner = bundle.LoadAsset<Item>($"Assets/JuicesMod/VitaminDetectorItem.asset");
-                NetworkPrefabs.RegisterNetworkPrefab(scanner.spawnPrefab);
-                Utilities.FixMixerGroups(scanner.spawnPrefab);
+                VitaminDetector = bundle.LoadAsset<Item>($"Assets/JuicesMod/VitaminDetectorItem.asset");
+                NetworkPrefabs.RegisterNetworkPrefab(VitaminDetector.spawnPrefab);
+                Utilities.FixMixerGroups(VitaminDetector.spawnPrefab);
 
                 TerminalNode node = ScriptableObject.CreateInstance<TerminalNode>();
                 node.clearPreviousText = true;
                 node.displayText = "A radar that detects nearby fruit juices.\n\n";
-                Items.RegisterShopItem(scanner, null, null, node, 74);
+                Items.RegisterShopItem(VitaminDetector, null, null, node, 74);
 
                 Logger.LogInfo($"Registered Vitamin Detector");
             }
