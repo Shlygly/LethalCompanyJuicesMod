@@ -6,6 +6,7 @@ namespace JuicesMod.Properties
 {
     public struct JuiceTypeProperty : INetworkSerializable
     {
+        [ES3NonSerializable]
         public static Dictionary<string, JuiceTypeProperty> JUICE_TYPES = [];
         public static void Initialize()
         {

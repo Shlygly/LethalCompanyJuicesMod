@@ -5,6 +5,7 @@ namespace JuicesMod.Properties
 {
     public struct FruitProperty : INetworkSerializable
     {
+        [ES3NonSerializable]
         public static FruitProperty[] FRUITS = [
             new FruitProperty("Orange", new Color(1.0f, 0.5882352941176471f, 0.0f)),
             new FruitProperty("Apple", new Color(0.7803921568627451f, 0.5568627450980392f, 0.12941176470588237f)), 

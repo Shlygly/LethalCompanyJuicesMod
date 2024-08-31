@@ -26,10 +26,18 @@ namespace JuicesMod.Behaviours
 
         public void Awake()
         {
+            if (ES3.KeyExists("JuicesMod_JuiceBlender_Content", GameNetworkManager.Instance.currentSaveFileName))
+            {
+                juiceContent = ES3.Load<JuiceProperty[]>("JuicesMod_JuiceBlender_Content", GameNetworkManager.Instance.currentSaveFileName).ToList();
+                for (int i = 0; i < juiceContent.Count; i++) {
+                    juiceRenderers[i].material.color = juiceContent[i].Fruit.Color;
+                }
+            }
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
             }
+            audioSource.pitch = 0f;
         }
 
         public void Update()
@@ -72,6 +80,11 @@ namespace JuicesMod.Behaviours
                 color.a = Mathf.Clamp(_juiceLevel - renderer.index, 0, 1);
                 renderer.value.material.color = color;
             }
+        }
+
+        public void SaveState()
+        {
+            ES3.Save("JuicesMod_JuiceBlender_Content", juiceContent.ToArray(), GameNetworkManager.Instance.currentSaveFileName);
         }
 
         public void DebugSpawnJuices()
@@ -169,6 +182,7 @@ namespace JuicesMod.Behaviours
             }
 
             ApplyBlendingState(false);
+            SaveState();
         }
 
         private void ApplyBlendingState(bool state)
@@ -216,6 +230,8 @@ namespace JuicesMod.Behaviours
             juiceContent.Add(juice);
 
             juiceRenderers[juiceContent.Count - 1].material.color = juice.Fruit.Color;
+
+            SaveState();
         }
         #endregion
     }

@@ -1,3 +1,7 @@
+# v1.3.2
+ - Fixed juice blender audio playing when player join
+ - Fixed juice blender save state on quit ([#3](https://github.com/Shlygly/LethalCompanyJuicesMod/issues/3))
+
 # v1.3.1
  - Made Vitamin Detector compatible with reserved item slot
 
@@ -7,7 +11,7 @@
  - Fixed scan nodes that didn't appear
 
 # v1.2.1
- - Fixed audio sources playing as global
+ - Fixed audio sources playing as global ([#1](https://github.com/Shlygly/LethalCompanyJuicesMod/issues/1))
 
 # v1.2.0
  - Added "Sapik" neon furniture
