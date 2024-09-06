@@ -1,3 +1,6 @@
+# v1.3.3
+ - Fixed juice blender for v64 ([#5](https://github.com/Shlygly/LethalCompanyJuicesMod/issues/5))
+
 # v1.3.2
  - Fixed juice blender audio playing when player join
  - Fixed juice blender save state on quit ([#3](https://github.com/Shlygly/LethalCompanyJuicesMod/issues/3))
