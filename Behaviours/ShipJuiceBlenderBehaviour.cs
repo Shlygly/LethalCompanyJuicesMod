@@ -143,7 +143,7 @@ namespace JuicesMod.Behaviours
                     Plugin.instance.JuicesBuilder.getMultifruit(type).spawnPrefab,
                     transform.position + Vector3.up + transform.forward * 0.5f,
                     transform.rotation,
-                    RoundManager.Instance.syncedPropsContainer
+                    RoundManager.Instance.spawnedScrapContainer
                 );
                 int scrapValue = (int)Mathf.Ceil(juiceContent.Sum(j => j.ScrapValue) * type.Multiplier);
                 multifruit.GetComponent<GrabbableObject>().fallTime = 0f;
