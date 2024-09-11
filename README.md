@@ -24,6 +24,7 @@ All juices are available in these formats :
  - **Carton** : price between 20 and 40 - multiplier : 1.2
  - **Premium bottle** : price between 30 and 60 - multiplier : 1.5
  - **Six pack** : price between 80 and 140 - multiplier : 1.3
+ - **Can** : price between 10 and 30 - multiplier : 1.1
 
 ### Vitamin detector
 
@@ -53,6 +54,16 @@ Here are all the neons available :
  - **Sapik Neon** : cost 24 ![Sapik neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-sapik.png)
  - **Cédhou Neon** : cost 24 ![Cédhou neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-cedhou.png)
  - **Saifrai Neon** : cost 24 ![Saifrai neon screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/furniture-neon-saifrai.png)
+
+## Other mods features
+
+Optional features if you have these mods.
+
+### [More Company](https://thunderstore.io/c/lethal-company/p/notnotnotswipez/MoreCompany/)
+
+Some cosmetics has been added.
+
+![More Company cosmetics screenshot](https://raw.githubusercontent.com/Shlygly/LethalCompanyJuicesMod/main/_doc-resources/cosmetics.png)
 
 ## Why ?
 

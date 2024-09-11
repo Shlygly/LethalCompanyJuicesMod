@@ -14,6 +14,7 @@ namespace JuicesMod
         public readonly ConfigEntry<int> cartonsRarity;
         public readonly ConfigEntry<int> premiumsRarity;
         public readonly ConfigEntry <int> packRarity;
+        public readonly ConfigEntry <int> canRarity;
 
         public Config(ConfigFile configFile)
         {
@@ -38,6 +39,12 @@ namespace JuicesMod
                 "PackRarity",
                 20,
                 "How likely six pack juices spawn (between 1 and 100)"
+            );
+            canRarity = configFile.Bind(
+                "Items.Rarity",
+                "CanRarity",
+                50,
+                "How likely cans juices spawn (between 1 and 100)"
             );
 
             ClearOrphanedEntries(configFile);

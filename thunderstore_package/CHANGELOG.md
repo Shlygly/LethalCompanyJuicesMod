@@ -1,3 +1,8 @@
+# v1.4.0
+ - Added can format
+ - Added orange hat cosmetic
+ - Added apple hat cosmetic
+
 # v1.3.3
  - Fixed juice blender for v64 ([#5](https://github.com/Shlygly/LethalCompanyJuicesMod/issues/5))
 

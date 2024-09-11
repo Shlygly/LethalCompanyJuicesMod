@@ -19,6 +19,9 @@ namespace JuicesMod.Properties
             JUICE_TYPES.Add("Pack",
                 new JuiceTypeProperty("Pack",       3,  1.3f,   80, 140,    Config.Instance.packRarity.Value)
             );
+            JUICE_TYPES.Add("Can",
+                new JuiceTypeProperty("Can",        4,  1.1f,   10, 30,     Config.Instance.canRarity.Value)
+            );
         }
 
         public string Name;
