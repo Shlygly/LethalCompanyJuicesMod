@@ -1,3 +1,6 @@
+# v1.4.1
+ - Added & fixed some SFX
+
 # v1.4.0
  - Added can format
  - Added orange hat cosmetic

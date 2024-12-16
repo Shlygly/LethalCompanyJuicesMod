@@ -1,6 +1,5 @@
 ﻿using GameNetcodeStuff;
 using JuicesMod.Properties;
-using LethalLib.Modules;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Netcode;
@@ -18,11 +17,16 @@ namespace JuicesMod.Behaviours
 
         public Animator bladeAnimator;
         public Animator speedSwitchAnimator;
-        public AudioSource audioSource;
         public List<Renderer> juiceRenderers = new();
         public InteractTrigger powerButtonTrigger;
         public InteractTrigger addJuiceTrigger;
         public GameObject juiceSpawnFX;
+
+        public AudioSource blenderMixAudioSource;
+
+        public AudioSource sfxAudioSource;
+        public List<AudioClip> addJuiceSFX = new();
+        public AudioClip powerButtonSFX;
 
         public void Awake()
         {
@@ -33,11 +37,11 @@ namespace JuicesMod.Behaviours
                     juiceRenderers[i].material.color = juiceContent[i].Fruit.Color;
                 }
             }
-            if (!audioSource.isPlaying)
+            if (!blenderMixAudioSource.isPlaying)
             {
-                audioSource.Play();
+                blenderMixAudioSource.Play();
             }
-            audioSource.pitch = 0f;
+            blenderMixAudioSource.pitch = 0f;
         }
 
         public void Update()
@@ -51,13 +55,13 @@ namespace JuicesMod.Behaviours
             // Audio
             if (isPowered)
             {
-                audioSource.pitch += (1 - audioSource.pitch) * 1 / 4;
+                blenderMixAudioSource.pitch += (1 - blenderMixAudioSource.pitch) * 1 / 4;
             }
             else
             {
-                audioSource.pitch += (0.5f - audioSource.pitch) * 1 / 16;
+                blenderMixAudioSource.pitch += (0.5f - blenderMixAudioSource.pitch) * 1 / 16;
             }
-            audioSource.volume = Mathf.Pow(2 * audioSource.pitch - 1, 0.25f);
+            blenderMixAudioSource.volume = Mathf.Pow(2 * blenderMixAudioSource.pitch - 1, 0.25f);
 
             // Materials
             _juiceLevel += (juiceContent.Count - _juiceLevel) / 2;
@@ -192,6 +196,7 @@ namespace JuicesMod.Behaviours
 
             speedSwitchAnimator.SetBool("power", isPowered);
             bladeAnimator.SetBool("power", isPowered);
+            sfxAudioSource.PlayOneShot(powerButtonSFX);
         }
         #endregion
 
@@ -230,6 +235,8 @@ namespace JuicesMod.Behaviours
             juiceContent.Add(juice);
 
             juiceRenderers[juiceContent.Count - 1].material.color = juice.Fruit.Color;
+
+            sfxAudioSource.PlayOneShot(addJuiceSFX[Random.RandomRangeInt(0, addJuiceSFX.Count)]);
 
             SaveState();
         }
