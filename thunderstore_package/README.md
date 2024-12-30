@@ -24,7 +24,7 @@ All juices are available in these formats :
  - **Carton** : price between 20 and 40 - multiplier : 1.2
  - **Premium bottle** : price between 30 and 60 - multiplier : 1.5
  - **Six pack** : price between 80 and 140 - multiplier : 1.3
- - **Can** : price between 10 and 30 - multiplier : 1.1
+ - **Can** : price between 10 and 30 - multiplier : 1.1 *(special format you can drink, see juices effects)*
 
 ### Vitamin detector
 
@@ -45,6 +45,22 @@ The price of a multi-fruit juice is the sum of the juices that have been combine
 If different juice formats are used in the same mix, the smallest multiplier is used.
 
 If the juice blender is not completely filled (4 juices), the multiplier is reduced.
+
+### Juices effects
+
+If you find a juice in can format, you can drink it to get a special effect.
+The juice's effect can be positive or negative and is chosen at random from the following list :
+
+ - **Positive effects** :
+	- **Healing** : Restore all health
+	- **Marathoner** : Almost unlimited stamina for 10 minutes
+	- **Night vision** : Better vision for 5 minutes (only inside factories)
+	- **Electromagnetic pulse** : Disable all turrets for 2 minutes
+ - **Negative effects** :
+	- **Damages** : Loses half health
+	- **Asthmatic** : No stamina for 10 minutes
+	- **Upside down** : Reverse vision for 5 minutes
+	- **Signal jamming** : All turrets go crazy for 2 minutes
 
 ### Neons
 

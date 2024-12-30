@@ -1,3 +1,14 @@
+# v1.5.0
+ - Added juices effects
+ - Added "Healing" juice effect
+ - Added "Damages" juice effect
+ - Added "Marathoner" juice effect
+ - Added "Asthmatic" juice effect
+ - Added "Night vision" juice effect
+ - Added "Upside down" juice effect
+ - Added "Electromagnetic pulse" juice effect
+ - Added "Signal jamming" juice effect
+
 # v1.4.1
  - Added & fixed some SFX
 

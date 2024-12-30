@@ -6,6 +6,8 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 using JuicesMod.Properties;
+using HarmonyLib;
+using JuicesMod.Patches;
 
 namespace JuicesMod
 {
@@ -62,11 +64,20 @@ namespace JuicesMod
                 node.displayText = "A radar that detects nearby fruit juices.\n\n";
                 Items.RegisterShopItem(VitaminDetector, null, null, node, 74);
 
-                Logger.LogInfo($"Registered Vitamin Detector");
+                Logger.LogInfo("Registered Vitamin Detector");
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                Logger.LogError($"Can't register Vitamin Detector !");
+                Logger.LogError("Can't register Vitamin Detector !");
+            }
+
+            try
+            {
+                Harmony.CreateAndPatchAll(typeof(PlayerControllerBPatch));
+            }
+            catch (Exception e)
+            {
+                Logger.LogError("Can't apply Harmony patches !");
             }
 
             Logger.LogInfo("Juices Mod Loaded");
