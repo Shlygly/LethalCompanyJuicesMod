@@ -32,8 +32,6 @@ namespace JuicesMod
 
             string assetDir = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "juicesmod");
             AssetBundle bundle = AssetBundle.LoadFromFile(assetDir);
-
-            RegisterRPCs();
             JuiceTypeProperty.Initialize();
 
             JuicesBuilder = new JuicesBuilder(bundle);
@@ -80,6 +78,7 @@ namespace JuicesMod
                 Logger.LogError("Can't apply Harmony patches !");
             }
 
+            RegisterRPCs();
             Logger.LogInfo("Juices Mod Loaded");
         }
 

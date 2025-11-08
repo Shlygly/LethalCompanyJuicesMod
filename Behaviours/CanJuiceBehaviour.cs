@@ -12,6 +12,9 @@ namespace JuicesMod.Behaviours
     {
         private (MethodInfo, JuiceEffectInfo)[] juiceEffects = [];
 
+        public AudioSource ItemAudio;
+        public AudioClip DrinkClip;
+
         public override void Start()
         {
             juiceEffects = GetType().GetMethods()
@@ -44,6 +47,7 @@ namespace JuicesMod.Behaviours
         {
             playerHeldBy.activatingItem = buttonDown;
             playerHeldBy.playerBodyAnimator.SetBool("useTZPItem", buttonDown);
+            ItemAudio.PlayOneShot(DrinkClip);
 
             yield return new WaitForSeconds(2);
 
