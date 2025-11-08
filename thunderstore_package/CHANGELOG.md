@@ -1,3 +1,7 @@
+# v1.6.0
+ - Fixed RPC compatibility on v73
+ - Added Vitamin Detector enable/disable option
+
 # v1.5.0
  - Added juices effects
  - Added "Healing" juice effect
