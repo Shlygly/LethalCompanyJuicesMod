@@ -15,6 +15,7 @@ namespace JuicesMod
         public readonly ConfigEntry<int> premiumsRarity;
         public readonly ConfigEntry <int> packRarity;
         public readonly ConfigEntry <int> canRarity;
+        public readonly ConfigEntry<bool> vitaminDetectorEnabled;
 
         public Config(ConfigFile configFile)
         {
@@ -45,6 +46,12 @@ namespace JuicesMod
                 "CanRarity",
                 50,
                 "How likely cans juices spawn (between 1 and 100)"
+            );
+            vitaminDetectorEnabled = configFile.Bind(
+                "Items.Enabled",
+                "VitaminDetectorEnabled",
+                true,
+                "Allow players to buy and use the VitaminDetector"
             );
 
             ClearOrphanedEntries(configFile);
