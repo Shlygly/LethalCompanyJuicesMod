@@ -53,16 +53,23 @@ namespace JuicesMod
 
             try
             {
-                VitaminDetector = bundle.LoadAsset<Item>($"Assets/JuicesMod/VitaminDetectorItem.asset");
-                NetworkPrefabs.RegisterNetworkPrefab(VitaminDetector.spawnPrefab);
-                Utilities.FixMixerGroups(VitaminDetector.spawnPrefab);
+                if (JuicesMod.Config.Instance.vitaminDetectorEnabled.Value)
+                {
+                    VitaminDetector = bundle.LoadAsset<Item>($"Assets/JuicesMod/VitaminDetectorItem.asset");
+                    NetworkPrefabs.RegisterNetworkPrefab(VitaminDetector.spawnPrefab);
+                    Utilities.FixMixerGroups(VitaminDetector.spawnPrefab);
 
-                TerminalNode node = ScriptableObject.CreateInstance<TerminalNode>();
-                node.clearPreviousText = true;
-                node.displayText = "A radar that detects nearby fruit juices.\n\n";
-                Items.RegisterShopItem(VitaminDetector, null, null, node, 74);
+                    TerminalNode node = ScriptableObject.CreateInstance<TerminalNode>();
+                    node.clearPreviousText = true;
+                    node.displayText = "A radar that detects nearby fruit juices.\n\n";
+                    Items.RegisterShopItem(VitaminDetector, null, null, node, 74);
 
-                Logger.LogInfo("Registered Vitamin Detector");
+                    Logger.LogInfo("Registered Vitamin Detector");
+                }
+                else
+                {
+                    Logger.LogInfo("Vitamin Detector disabled");
+                }
             }
             catch (Exception e)
             {
