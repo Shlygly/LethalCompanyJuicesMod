@@ -1,3 +1,7 @@
+# v2.0.0
+ - Proceed to a complete refactor of how juices are geneterated and bundled for mod optimisation
+ - Added grape juice (Praisk Duvin)
+
 # v1.6.0
  - Fixed RPC compatibility on v73
  - Added Vitamin Detector enable/disable option

@@ -18,6 +18,7 @@ Here are all the types of juice available :
  - **Saydlassoup** : Tomato juice
  - **Daibousher** : Prune juice
  - **Traize & Paie** : Banana juice
+ - **Praisk Duvin** : Grape juice
  - **Plindfruy** : Multifruit juice (special juice that can't spawn, see juice blender mechanic)
 
 All juices are available in these formats :
